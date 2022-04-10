@@ -153,7 +153,7 @@ function Home() {
                     )}
                   </div>
                   
-                  <div style={{"bottom":"0","position":"absolute"}}>{input? 
+                  <div style={{"marginTop":"10px"}}>{input? 
                   <div>
                     Source Text: 
                     <p><b>
