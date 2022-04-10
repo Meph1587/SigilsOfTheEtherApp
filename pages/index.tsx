@@ -80,11 +80,19 @@ function Home() {
         <div  style={{"marginTop": "-0.4em"}} >
           <nav>
             <Account triedToEagerConnect={triedToEagerConnect} />
-              <a style={{"textAlign": "right", "padding":"20px"}} 
+            <div style={{"textAlign": "right", "padding":"20px"}}>
+              <a 
                 href={"https://rinkeby.etherscan.io/address/"+sigilAddress+"#readContract"} target="_blank"
               >
                 <u>Contract on Etherscan</u>
               </a>
+                <br/>
+              <a 
+                href={"https://testnets.opensea.io/collection/sigilsoftheether-v2"} target="_blank"
+              >
+                <u>Sigils on Opensea</u>
+              </a>
+              </div>
           </nav>
           <div>
             <h1 style={{"fontSize": "3.4em"}}>Sigils of the Ether</h1>
@@ -93,7 +101,7 @@ function Home() {
           <div style={layout.main}>
             <div style={{"position":"relative","margin":"30px"}}>
               {preview ? 
-                <div style={{"margin":"20px", "textAlign":"center"}}>
+                <div style={{"marginLeft":"80px", "marginRight":"80px", "textAlign":"center"}}>
                   {isConnected && (
                     <section>
                       <Button
@@ -157,7 +165,7 @@ function Home() {
                 </div>
               }
             </div>
-            <div style={{"margin":"30px"}}>
+            <div style={{"marginLeft":"80px", "marginRight":"80px"}}>
               <img width="500px" height="500px" src={sigilImg?.data} />
               {preview ? casting ? <p>Casting your Sigil ... </p>:'':''}
               {mode > 0 ? preview ? hideOnce ? '' : <p>Your Sigil Number: { casting ? nonce?.data?.toNumber() + 1 : nonce?.data?.toNumber()}</p> :'':''}

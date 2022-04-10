@@ -82,8 +82,10 @@ const Account = ({ triedToEagerConnect }: Props) => {
   }
 
   return (
-    <div style={{"padding":"20px",  "marginBottom": "1em", "maxHeight": "49em", "maxWidth": "75%", "overflow": "scroll"}}>
-      Connected: {account}
+    <div style={{"textAlign":"left","padding":"20px",  "marginBottom": "1em", "maxHeight": "49em", "maxWidth": "75%", "overflow": "scroll"}}>
+      Connected: {account.slice(0,6)}...
+      <br/>
+      Rinkeby
     </div>
   );
 };
